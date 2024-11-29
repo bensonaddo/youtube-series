@@ -1,3 +1,5 @@
-const Backdrop = () => <div className="backdrop"></div>;
+const Backdrop = (props) => (
+  <div className="backdrop" onClick={props.onClick}></div>
+);
 
 export default Backdrop;
