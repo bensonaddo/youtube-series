@@ -1,10 +1,7 @@
 const Todo = (props) => {
   const { text } = props;
 
-  function deleteHandler() {
-    console.log("Todo deleted!");
-    console.log(text);
-  }
+  function deleteHandler() {}
 
   return (
     <div className="card">
