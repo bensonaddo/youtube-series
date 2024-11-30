@@ -3,22 +3,14 @@ import newMeetupFormCSS from "./NewMeetupForm.module.css";
 function NewMeetupForm() {
   function submitHandler(event) {
     event.preventDefault();
-    const enteredTitle = event.target[0].value;
-    const enteredImage = event.target[1].value;
-    const enteredAddress = event.target[2].value;
-    const enteredDescription = event.target[3].value;
 
-    // const { title, image, address, description } = event.target.elements; // Destructuring the form elements
+    const { title, image, address, description } = event.target.elements; // Destructuring the form elements
 
     const meetupData = {
-      title: enteredTitle,
-      image: enteredImage,
-      address: enteredAddress,
-      description: enteredDescription,
-      // title: title.value,
-      // image: image.value,
-      // address: address.value,
-      // description: description.value,
+      title: title.value,
+      image: image.value,
+      address: address.value,
+      description: description.value,
     };
 
     console.log(meetupData);
