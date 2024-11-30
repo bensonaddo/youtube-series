@@ -1,5 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import NewMeetupForm from "../components/form/new-meetup/NewMeetupForm";
 function NewMeetupPage() {
+  const navigate = useNavigate();
+
   // Create a Realtime Database in Firebase and get the URL
   const firebaseUrl = "https://meetups-ed686-default-rtdb.firebaseio.com/";
   function addMeetupHandler(meetupData) {
@@ -9,6 +12,8 @@ function NewMeetupPage() {
       headers: {
         "Content-Type": "application/json",
       },
+    }).then(() => {
+      navigate("/");
     });
   }
   return (
