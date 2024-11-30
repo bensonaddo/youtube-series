@@ -1,9 +1,10 @@
 import { NavLink } from "react-router-dom";
+import mainNavCss from "./MainNavigation.module.css";
 
 function MainNavigation() {
   return (
-    <header>
-      <div>Great MeetUps</div>
+    <header className={mainNavCss.header}>
+      <div className={mainNavCss.logo}>Great MeetUps</div>
       <nav>
         <ul>
           <li>
