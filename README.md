@@ -72,4 +72,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### Find all project files
 
 https://github.com/academind/react-complete-guide-code/tree/zz-reactjs-summary/code
+
+### Create a firebase project
+
+https://console.firebase.google.com/
+
+### Create a firebase Realtime Database
+
+https://firebase.google.com/docs/database/web/start
+
 []: # (end)
