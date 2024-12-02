@@ -5,4 +5,10 @@ const FavoritesContext = createContext({
   totalFavorites: 0,
 });
 
+export function FavoritesContextProvider(props) {
+  return (
+    <FavoritesContext.Provider>{props.children}</FavoritesContext.Provider>
+  );
+}
+
 export default FavoritesContext;
