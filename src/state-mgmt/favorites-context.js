@@ -15,7 +15,13 @@ export function FavoritesContextProvider(props) {
       prevUserFavorites.concat(favoriteMeetup)
     );
   }
-  function removeFavoriteHandler() {}
+  function removeFavoriteHandler(meetupId) {
+    // get latest state and remove meetup from the list
+    setUserFavorites(
+      (prevUserFavorites) =>
+        prevUserFavorites.filter((meetup) => meetup.id !== meetupId) // filter out the meetup with the given id
+    );
+  }
 
   //   Determine if an item is a favorite.
   function itemIsFavoriteHandler() {}
