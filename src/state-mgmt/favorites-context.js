@@ -12,6 +12,9 @@ export function FavoritesContextProvider(props) {
   function addFavoriteHandler() {}
   function removeFavoriteHandler() {}
 
+  //   Determine if an item is a favorite.
+  function itemIsFavoriteHandler() {}
+
   // This is the context object that will be provided to all components that use the FavoritesContext.
   const context = {
     favorites: userFavorites,
