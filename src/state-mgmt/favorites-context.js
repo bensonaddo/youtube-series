@@ -6,8 +6,12 @@ const FavoritesContext = createContext({
 });
 
 export function FavoritesContextProvider(props) {
+  const context = {};
+
   return (
-    <FavoritesContext.Provider>{props.children}</FavoritesContext.Provider>
+    <FavoritesContext.Provider value={context}>
+      {props.children}
+    </FavoritesContext.Provider>
   );
 }
 
