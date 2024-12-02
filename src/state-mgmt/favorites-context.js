@@ -9,7 +9,12 @@ export function FavoritesContextProvider(props) {
   // Setting up the state for the context provider.
   const [userFavorites, setUserFavorites] = useState([]);
 
-  function addFavoriteHandler() {}
+  function addFavoriteHandler(favoriteMeetup) {
+    // get latest state and add new meetup to the list
+    setUserFavorites((prevUserFavorites) =>
+      prevUserFavorites.concat(favoriteMeetup)
+    );
+  }
   function removeFavoriteHandler() {}
 
   //   Determine if an item is a favorite.
