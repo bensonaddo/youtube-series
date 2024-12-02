@@ -9,6 +9,9 @@ export function FavoritesContextProvider(props) {
   // Setting up the state for the context provider.
   const [userFavorites, setUserFavorites] = useState([]);
 
+  function addFavoriteHandler() {}
+  function removeFavoriteHandler() {}
+
   // This is the context object that will be provided to all components that use the FavoritesContext.
   const context = {
     favorites: userFavorites,
