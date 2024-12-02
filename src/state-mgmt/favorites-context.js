@@ -24,7 +24,9 @@ export function FavoritesContextProvider(props) {
   }
 
   //   Determine if an item is a favorite.
-  function itemIsFavoriteHandler() {}
+  function itemIsFavoriteHandler(meetupId) {
+    return userFavorites.some((meetup) => meetup.id === meetupId); // check if the meetup with the given id is in the list
+  }
 
   // This is the context object that will be provided to all components that use the FavoritesContext.
   const context = {
