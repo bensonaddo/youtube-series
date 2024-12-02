@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
 const FavoritesContext = createContext({
   favorites: [],
@@ -6,7 +6,14 @@ const FavoritesContext = createContext({
 });
 
 export function FavoritesContextProvider(props) {
-  const context = {};
+  // Setting up the state for the context provider.
+  const [userFavorites, setUserFavorites] = useState([]);
+
+  // This is the context object that will be provided to all components that use the FavoritesContext.
+  const context = {
+    favorites: userFavorites,
+    totalFavorites: userFavorites.length,
+  };
 
   return (
     <FavoritesContext.Provider value={context}>
